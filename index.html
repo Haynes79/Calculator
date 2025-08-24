@@ -11,6 +11,17 @@
       color: white;
     }
 
+    .container {
+      display: grid;
+      place-items: center;
+      row-gap: 20px;
+    }
+
+    p{
+      display: flex;
+      column-gap: 15px
+    }
+
     .calculation{
       color: white;
       font-size: 45px;
@@ -47,7 +58,8 @@
 </head>
 <body>
 
-  <p class="js-display calculation"></p>
+  <div class="container">
+    <p class="js-display calculation"></p>
   
   <p>
     <button class="calculator-button gray-button"
@@ -131,7 +143,7 @@
     ">/</button>
   </p>
 
-  <p>
+  <p style="margin-left: 250px;">
     <button class="calculator-button gray-button clear-button"
     onclick="
     calculation = '';
@@ -143,6 +155,8 @@
     </button>
   </p>
 
+  </div>
+  
   <script>
 
     let calculation = localStorage.getItem('calculation') || ''; 
